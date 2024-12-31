@@ -26,4 +26,13 @@ app.on('error', (error) => {
     console.log(`Error on express App`, error);
     throw error;
 })
+
+//routes import
+
+import userRouter from "./routes/user.route.js"
+
+//routes declartion
+
+app.use("/api/v1/users", userRouter);
+
 export default app
